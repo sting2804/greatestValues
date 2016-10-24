@@ -3,7 +3,7 @@ package com.testapp
 /**
  * Created by sting on 10/20/16.
  */
-class ManualValuesFinder extends GroovyValuesFinder {
+class MergeSortValuesFinder extends GroovyValuesFinder {
 
     static void sortArray(int[] array) {
         mergeSort(array)

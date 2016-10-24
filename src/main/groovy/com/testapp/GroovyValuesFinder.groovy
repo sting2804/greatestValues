@@ -1,10 +1,5 @@
 package com.testapp
 
-import java.lang.reflect.Array
-
-/**
- * Created by sting on 10/20/16.
- */
 class GroovyValuesFinder {
 
     static int[] getGreatestValuesWithoutDuplicates(int[] array, int k) {

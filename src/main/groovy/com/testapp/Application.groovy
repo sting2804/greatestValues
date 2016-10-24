@@ -1,7 +1,5 @@
 package com.testapp
 
-import java.lang.reflect.Array
-
 class Application {
     public static void main(String[] args) {
         def arrayList = []
@@ -20,7 +18,7 @@ class Application {
         println()
         array = arrayList as int[]
         startTime = System.currentTimeMillis()
-        result = ManualValuesFinder.getGreatestValuesWithoutDuplicates(array, 30)
+        result = MergeSortValuesFinder.getGreatestValuesWithoutDuplicates(array, 30)
         stopTime = System.currentTimeMillis()
         println "M size: ${result.length}"
         println "M time: ${(stopTime - startTime) / 1000}"

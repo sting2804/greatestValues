@@ -2,10 +2,10 @@ package com.testapp
 
 import spock.lang.Specification
 
-class ManualValuesFinderTest extends Specification {
+class MergeSortValuesFinderTest extends Specification {
     def "getGreatestValuesWithoutDuplicates, no duplicates, sorted array"() {
         when:
-        def res = ManualValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
+        def res = MergeSortValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
 
         then:
         res == expectedResult
@@ -30,7 +30,7 @@ class ManualValuesFinderTest extends Specification {
 
     def "getGreatestValuesWithoutDuplicates, with duplicates, sorted array"() {
         when:
-        def res = ManualValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
+        def res = MergeSortValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
 
         then:
         res == expectedResult
@@ -51,7 +51,7 @@ class ManualValuesFinderTest extends Specification {
 
     def "getGreatestValuesWithoutDuplicates, no duplicates, not sorted array"() {
         when:
-        def res = ManualValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
+        def res = MergeSortValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
 
         then:
         res == expectedResult
@@ -76,7 +76,7 @@ class ManualValuesFinderTest extends Specification {
 
     def "getGreatestValuesWithoutDuplicates, with duplicates, not sorted array"() {
         when:
-        def res = ManualValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
+        def res = MergeSortValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
 
         then:
         res == expectedResult
