@@ -3,9 +3,9 @@ package com.testapp
 import spock.lang.Specification
 
 class MergeSortValuesFinderTest extends Specification {
-    def "getGreatestValuesWithoutDuplicates, no duplicates, sorted array"() {
+    def "getLargestValues, no duplicates, sorted array"() {
         when:
-        def res = MergeSortValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
+        def res = MergeSortValuesFinder.getLargestValues(array, k)
 
         then:
         res == expectedResult
@@ -28,9 +28,9 @@ class MergeSortValuesFinderTest extends Specification {
         ]
     }
 
-    def "getGreatestValuesWithoutDuplicates, with duplicates, sorted array"() {
+    def "getLargestValues, with duplicates, sorted array"() {
         when:
-        def res = MergeSortValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
+        def res = MergeSortValuesFinder.getLargestValues(array, k)
 
         then:
         res == expectedResult
@@ -49,9 +49,9 @@ class MergeSortValuesFinderTest extends Specification {
         ]
     }
 
-    def "getGreatestValuesWithoutDuplicates, no duplicates, not sorted array"() {
+    def "getLargestValues, no duplicates, not sorted array"() {
         when:
-        def res = MergeSortValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
+        def res = MergeSortValuesFinder.getLargestValues(array, k)
 
         then:
         res == expectedResult
@@ -74,9 +74,9 @@ class MergeSortValuesFinderTest extends Specification {
         ]
     }
 
-    def "getGreatestValuesWithoutDuplicates, with duplicates, not sorted array"() {
+    def "getLargestValues, with duplicates, not sorted array"() {
         when:
-        def res = MergeSortValuesFinder.getGreatestValuesWithoutDuplicates(array, k)
+        def res = MergeSortValuesFinder.getLargestValues(array, k)
 
         then:
         res == expectedResult

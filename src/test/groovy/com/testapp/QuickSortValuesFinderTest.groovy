@@ -1,14 +1,14 @@
-/**
- * Created by sting on 10/20/16.
- */
 package com.testapp
 
 import spock.lang.Specification
 
-class GroovyValuesFinderTest extends Specification {
+/**
+ * Created by sting on 10/24/16.
+ */
+class QuickSortValuesFinderTest extends Specification {
     def "getLargestValues, no duplicates, sorted array"() {
         when:
-        def res = GroovyValuesFinder.getLargestValues(array, k)
+        def res = QuickSortValuesFinder.getLargestValues(array, k)
 
         then:
         res == expectedResult
@@ -19,29 +19,21 @@ class GroovyValuesFinderTest extends Specification {
                 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as int[],
                 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as int[],
                 [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] as int[],
-                [1, 2,] as int[],
-                [1, 2,] as int[],
-                [1,] as int[],
-                [] as int[],
         ]
         k << [
-                1, 2, 3, 4, 2, 3, 1, 1
+                1, 2, 3, 4,
         ]
         expectedResult << [
                 [11] as int[],
                 [10, 11] as int[],
                 [9, 10, 11] as int[],
                 [8, 9, 10, 11] as int[],
-                [1, 2] as int[],
-                [1, 2] as int[],
-                [1,] as int[],
-                [] as int[],
         ]
     }
 
     def "getLargestValues, with duplicates, sorted array"() {
         when:
-        def res = GroovyValuesFinder.getLargestValues(array, k)
+        def res = QuickSortValuesFinder.getLargestValues(array, k)
 
         then:
         res == expectedResult
@@ -62,7 +54,7 @@ class GroovyValuesFinderTest extends Specification {
 
     def "getLargestValues, no duplicates, not sorted array"() {
         when:
-        def res = GroovyValuesFinder.getLargestValues(array, k)
+        def res = QuickSortValuesFinder.getLargestValues(array, k)
 
         then:
         res == expectedResult
@@ -87,7 +79,7 @@ class GroovyValuesFinderTest extends Specification {
 
     def "getLargestValues, with duplicates, not sorted array"() {
         when:
-        def res = GroovyValuesFinder.getLargestValues(array, k)
+        def res = QuickSortValuesFinder.getLargestValues(array, k)
 
         then:
         res == expectedResult

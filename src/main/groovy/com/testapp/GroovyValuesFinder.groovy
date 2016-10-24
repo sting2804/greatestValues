@@ -2,7 +2,7 @@ package com.testapp
 
 class GroovyValuesFinder {
 
-    static int[] getGreatestValuesWithoutDuplicates(int[] array, int k) {
+    static int[] getLargestValues(int[] array, int k) {
         if (k < 1 || k >= array.length)
             return array
         def resultList = []
@@ -13,7 +13,7 @@ class GroovyValuesFinder {
     }
 
     static void sortArray(int[] array) {
-        Arrays.sort(array)
+        Arrays.parallelSort(array)
     }
 
     static int[] removeDuplicates(int[] array) {
